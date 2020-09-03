@@ -35,6 +35,26 @@ export const NavbarContainer = styled.div`
              }
         }
     }
+    @media(min-width: 700px){
+        ul{
+            padding: 8px 110px 8px 110px;
+            
+            li {
+                flex-direction: row;
+                font-size: 12pt;
+                margin-bottom: 5px;
+
+                a {
+                    flex-direction: row;
+                } 
+
+                 svg {
+                    margin-right: 8px;
+                    margin-bottom: 0;
+                 }
+            }
+        }
+    }
   
 
 `;
