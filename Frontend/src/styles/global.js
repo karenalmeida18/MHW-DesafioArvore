@@ -8,12 +8,12 @@ export default createGlobalStyle`
         box-sizing: border-box;
     }
 
-    html, body, #root {
-        min-height: 100%;
-    }
-
-    body {
+    html,
+    body,
+    #root {
         -webkit-font-smoothing: antialiased !important;
+        font-family: 'Roboto', sans-serif;
+        min-height: 100%;
     }
 
 `;
