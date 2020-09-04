@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const RecompensesContainer = styled.div`
-  display: flex;
-  position: fixed;
-  top: 80px;
   width: 100%;
+  height: 100vh;
   flex-direction: column;
   justify-content: space-between;
 
-  h1{
+  h2{
     margin-left: 20px;
   }
 
@@ -22,6 +20,10 @@ export const RecompensesContainer = styled.div`
     text-decoration: none;
     transition: background 0.2s;
   }
+ 
+  @media(min-width: 700px){
+    padding: 8px 110px 8px 110px;
+  }
 
 `;
 
@@ -30,7 +32,7 @@ export const RecompensesBox = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border-top: 1px solid #999999;
+  border-top: 1px solid #dbdbdb;
 `;
 
 export const NewRecompensa = styled.button`
@@ -59,9 +61,13 @@ export const Recompense = styled.button`
   align-items: center;
   border: none;
   background-color: #FFFFFF;
-  border-bottom: 1px solid #999999;
+  border-bottom: 1px solid #dbdbdb;
 
   svg {
     color: #A97ED1;
+  }
+  
+  @media(min-width: 700px){
+    height: 80px;
   }
 `;

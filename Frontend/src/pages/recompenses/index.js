@@ -1,44 +1,51 @@
 import React from 'react';
+
+
 import { MdCake, MdAddCircle } from "react-icons/md";
 import { RiArrowLeftLine } from "react-icons/ri";
-import {RecompensesContainer, NewRecompensa, Voltar, Recompense, RecompensesBox} from './styles'
 
+import { RecompensesContainer, NewRecompensa, Voltar, Recompense, RecompensesBox } from './styles';
+import Navbar from '../../components/Navbar';
+import Topbar from '../../components/Topbar';
 
 export default function Recompenses() {
- 
+
     return (
-        <RecompensesContainer>
+        <>
+            <Topbar />
+            <RecompensesContainer>
 
-            <h1>Recompensas</h1> 
+                <h2>Recompensas</h2>
 
-            <NewRecompensa>
-                <MdAddCircle/> 
+                <NewRecompensa>
+                    <MdAddCircle />
                  Nova recompensa
             </NewRecompensa>
 
-            <RecompensesBox>
-                <Recompense>
-                    <MdCake/>      
+                <RecompensesBox>
+                    <Recompense>
+                        <MdCake />
                     Ver desenho depois do almoço
                 </Recompense>
 
-                <Recompense>
-                    <MdCake/>      
+                    <Recompense>
+                        <MdCake />
                     Caneta nova
                 </Recompense>
 
-                <Recompense>
-                    <MdCake/>      
+                    <Recompense>
+                        <MdCake />
                     Escolher o jantar de hoje
                 </Recompense>
 
-                <Recompense>
-                    <MdCake/>      
+                    <Recompense>
+                        <MdCake />
                     Dormir mais tarde
                 </Recompense>
-            </RecompensesBox>
+                </RecompensesBox>
 
-        </RecompensesContainer>
-
+            </RecompensesContainer>
+            <Navbar />
+        </>
     );
 }

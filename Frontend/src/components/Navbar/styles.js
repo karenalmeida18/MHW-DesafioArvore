@@ -27,6 +27,10 @@ export const NavbarContainer = styled.div`
               flex-direction: column;
               display: flex;
               align-items: center;
+
+              :active {
+                color: #00BFA6;
+              }
             }
 
             svg {
