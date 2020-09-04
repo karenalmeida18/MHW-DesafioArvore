@@ -1,89 +1,67 @@
 import styled from "styled-components";
 
 export const RecompensesContainer = styled.div`
-  
   display: flex;
   position: fixed;
   top: 80px;
   width: 100%;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  
-  
-   
-  .voltar{
-  display: block;
-  position: fixed;
-  top: 15px;
-  width: 100%;
-  margin:5px;
-  font-size:30px;
+
+  h1{
+    margin-left: 20px;
   }
 
-  
-  .recompensa1 {
-    display: inline-block;
-    position: fixed;
-    top: 200px;
-    width: 100%;
-    flex-direction: row;
-    padding-bottom:15px;
-    border-bottom: 1px solid grey;
-
-    
-    
-   svg {
-      margin-right: 12px;
-      font-size:20px;
-      color:#A97ED1;
-          
-    } 
-     }
-
-  .recompensa2 {
-    display: inline-block;
-    position: fixed;
-    top: 250px;
-    width: 100%;
-    flex-direction: row;
-    padding-bottom:15px;
-    border-bottom: 1px solid grey;
-    
-    
-    
-  
-
-  svg {
-      margin-right: 12px;
-      font-size:20px;
-      color:#A97ED1;
-    }
-  }
-
-
-`;
-
-export const NewRecompensa = styled.div`
-
-
-  display: inline-block;
-  position: fixed;
-  top: 150px;
-  width: 100%;
-  flex-direction: row;
-  padding-bottom:15px;
-  border-bottom: 1px solid grey;
-  
-
-  svg {
+  svg{
     margin-right: 12px;
-    font-size:20px;
-    color:#45D0C1;
+    margin-left: 20px;
+    font-size: 20px;
+  }
+
+  button{
+    text-decoration: none;
+    transition: background 0.2s;
   }
 
 `;
 
+export const RecompensesBox = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #999999;
+`;
 
-
-
+export const NewRecompensa = styled.button`
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  align-self: initial;
+  width: 50%;
+  height: 50px;
+  margin: 25px 0 25px 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: #45D0C1;
+  color: #FFFFFF;
   
+  svg {
+    color: #FFFFFF;
+  }
+`;
+
+export const Recompense = styled.button`
+  display: flex;
+  width: 100%;
+  height: 50px; 
+  flex-direction: row;
+  align-items: center;
+  border: none;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #999999;
+
+  svg {
+    color: #A97ED1;
+  }
+`;
