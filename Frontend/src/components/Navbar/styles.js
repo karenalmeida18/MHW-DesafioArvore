@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
-    position: fixed;
+    position: sticky;
     bottom: 0;
     width: 100%;
     justify-content: space-between;
@@ -27,15 +27,15 @@ export const NavbarContainer = styled.div`
               flex-direction: column;
               display: flex;
               align-items: center;
-           }
+            }
 
-             svg {
-               font-size: 14pt;
-               margin-bottom: 4px;
-             }
+            svg {
+                font-size: 14pt;
+                margin-bottom: 4px;
+            }
         }
     }
-    @media(min-width: 700px){
+    @media(min-width: 700px){    
         ul{
             padding: 8px 110px 8px 110px;
             
@@ -48,10 +48,10 @@ export const NavbarContainer = styled.div`
                     flex-direction: row;
                 } 
 
-                 svg {
+                svg {
                     margin-right: 8px;
                     margin-bottom: 0;
-                 }
+                }
             }
         }
     }
