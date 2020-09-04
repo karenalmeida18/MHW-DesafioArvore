@@ -1,51 +1,52 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-
-import { MdCake, MdAddCircle } from "react-icons/md";
-import { RiArrowLeftLine } from "react-icons/ri";
-
-import { RecompensesContainer, NewRecompensa, Voltar, Recompense, RecompensesBox } from './styles';
-import Navbar from '../../components/Navbar';
-import Topbar from '../../components/Topbar';
+import ListRecompenses from '../../components/ListRecompenses/index';
+import NewRecompenseModal from '../../components/ModaisRecompenses/index';
+import CategoryModal from '../../components/ModaisRecompenses/category';
+import TimeModal from '../../components/ModaisRecompenses/time';
+import BooksModal from '../../components/ModaisRecompenses/books';
 
 export default function Recompenses() {
+    const [visibleNewRecompense, setVisibleNewRecompense] = useState(false);
+    const [visibleCategory, setVisibleCategory] = useState(false);
+    const [visibleTime, setVisibleTime] = useState(false);
+    const [visibleBooks, setVisibleBooks] = useState(false);
+
+
+    function openCategory() {
+        setVisibleCategory(true);
+        setVisibleNewRecompense(false);
+        setVisibleTime(false);
+        setVisibleBooks(false);
+    }
+    function openTime() {
+        setVisibleCategory(false);
+        setVisibleNewRecompense(false);
+        setVisibleTime(true);
+        setVisibleBooks(false);
+    }
+    function openBook() {
+        setVisibleCategory(false);
+        setVisibleNewRecompense(false);
+        setVisibleTime(false);
+        setVisibleBooks(true);
+    }
 
     return (
         <>
-            <Topbar />
-            <RecompensesContainer>
+            <ListRecompenses openNewRecompense={() => setVisibleNewRecompense(true)} />
 
-                <h2>Recompensas</h2>
+            {visibleNewRecompense && <NewRecompenseModal
+                onClose={() => setVisibleNewRecompense(false)}
+                openCategory={openCategory}
+                openTime={openTime}
+                openBook={openBook} />
+            }
 
-                <NewRecompensa>
-                    <MdAddCircle />
-                 Nova recompensa
-            </NewRecompensa>
+            {visibleCategory && <CategoryModal onClose={() => setVisibleCategory(false)} />}
+            {visibleTime && <TimeModal onClose={() => setVisibleTime(false)} />}
+            {visibleBooks && <BooksModal onClose={() => setVisibleBooks(false)} />}
 
-                <RecompensesBox>
-                    <Recompense>
-                        <MdCake />
-                    Ver desenho depois do almoço
-                </Recompense>
-
-                    <Recompense>
-                        <MdCake />
-                    Caneta nova
-                </Recompense>
-
-                    <Recompense>
-                        <MdCake />
-                    Escolher o jantar de hoje
-                </Recompense>
-
-                    <Recompense>
-                        <MdCake />
-                    Dormir mais tarde
-                </Recompense>
-                </RecompensesBox>
-
-            </RecompensesContainer>
-            <Navbar />
         </>
     );
 }

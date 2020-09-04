@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { IoMdFlower, IoIosArrowForward } from 'react-icons/io';
 import { FaTree, FaMountain } from 'react-icons/fa';
-import { GiFruitTree, GiCottonFlower } from 'react-icons/gi';
+import { GiFruitTree } from 'react-icons/gi';
 import { RiPlantFill } from 'react-icons/ri';
 
 import { Container, Ambients, Titulo, Floresta, Jardim, Pomar, Terrario, Recompensas } from './styles';
