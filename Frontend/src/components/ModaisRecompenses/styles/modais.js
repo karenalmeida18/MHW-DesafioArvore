@@ -46,25 +46,56 @@ export const Modal = styled.div`
 
 `;
 export const Recompense = styled.button`
-  display: flex;
-  width: 100%;
-  height: 50px; 
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  border: none;
-  background-color: #FFFFFF;
-  border-bottom: 1px solid #dbdbdb;
+       display: flex;
+       width: 100%;
+       height: 50px; 
+       flex-direction: row;
+       align-items: center;
+       justify-content: space-between;
+       border: none;
+       background-color: #FFFFFF;
+       border-bottom: 1px solid #dbdbdb;
 
-  svg {
-    color: black;
-  }
-  p{
+    svg {
+      color: black;
+    }
+    p{
       display: flex;
       align-items: center;
-  }
+    }
   
   @media(min-width: 700px){
     height: 80px;
+  }
+`;
+
+export const TextArea = styled.textarea `
+       display: flex;
+       width: 100%;
+       height: 50px;
+       padding: 20px;
+       flex-direction: row;
+       border: 0;
+       align-items: center;
+       justify-content: space-between;
+       background-color: #FFFFFF;
+       border-bottom: 1px solid #dbdbdb;
+`;
+
+export const Title = styled.div`
+       width: 100%;
+       display: flex;
+       align-items: center;
+       padding-bottom: 20px;
+       margin-left: 20px;
+       p {
+          display: flex;
+          align-items: center;
+          margin: 0;
+       svg {
+           margin-left: 20px; 
+           color: #45D0c1;
+           font-size: 17pt;
+       }
   }
 `;
