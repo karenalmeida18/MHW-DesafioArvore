@@ -38,24 +38,19 @@ export default function ListRecompenses(props) {
 
                 <RecompensesBox>
                     <Recompense>
-                        <MdCake />
-                    Ver desenho depois do almoço
-                </Recompense>
+                        {recompensesData.length > 0 ? (
+                            <>
+                              {recompensesData.map((recompense) => (
+                                  <>
+                                <MdCake />
+                                <span>{recompense.description}</span>
+                                </>
+                            ))}
+                            </>
+                        ) : <span> Nenhuma recompensa disponivel </span> }
+                      
+                    </Recompense>
 
-                    <Recompense>
-                        <MdCake />
-                    Caneta nova
-                </Recompense>
-
-                    <Recompense>
-                        <MdCake />
-                    Escolher o jantar de hoje
-                </Recompense>
-
-                    <Recompense>
-                        <MdCake />
-                    Dormir mais tarde
-                </Recompense>
                 </RecompensesBox>
 
             </RecompensesContainer>
