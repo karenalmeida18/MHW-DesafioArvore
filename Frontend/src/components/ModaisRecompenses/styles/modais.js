@@ -80,13 +80,21 @@ export const TextArea = styled.textarea `
        justify-content: space-between;
        background-color: #FFFFFF;
        border-bottom: 1px solid #dbdbdb;
+       margin-bottom: 20px;
 `;
-
+export const CostumizeBox = styled.div `
+       display: flex;
+       padding: 20px;
+       flex-direction: column;
+       border: 0;
+       align-items: center;
+       justify-content: space-between;
+`;
 export const Title = styled.div`
        width: 100%;
        display: flex;
        align-items: center;
-       padding-bottom: 20px;
+       padding: 20px;
        margin-left: 20px;
        p {
           display: flex;
