@@ -15,5 +15,8 @@ export default createGlobalStyle`
         font-family: 'Roboto', sans-serif;
         min-height: 100%;
     }
+    button {
+        cursor: pointer;
+    }
 
 `;

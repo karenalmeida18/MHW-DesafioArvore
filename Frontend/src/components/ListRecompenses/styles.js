@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 export const RecompensesContainer = styled.div`
-  width: 100%;
-  height: 100vh;
-  flex-direction: column;
-  justify-content: space-between;
+   width: 100%;
+   height: 100vh;
+   flex-direction: column;
+   justify-content: space-between;
 
-  h2{
+  h3{
     margin-left: 20px;
   }
 
@@ -32,7 +32,6 @@ export const RecompensesBox = styled.div`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  border-top: 1px solid #dbdbdb;
 `;
 
 export const NewRecompensa = styled.button`
