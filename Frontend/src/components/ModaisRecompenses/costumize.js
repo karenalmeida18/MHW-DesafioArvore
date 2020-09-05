@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+
+import api from '../../services/api';
 
 import { AiOutlineEdit } from 'react-icons/ai';
 import { MdClear } from "react-icons/md";
@@ -8,12 +10,26 @@ import { Modal, Container, Header, TextArea, Title, CostumizeBox } from './style
 import { SubmitButton } from '../ModalLogin/styles';
 
 export default function CustomizeRecompense(props) {
+    const [data, setData] = useState("");
     const History = useHistory();
 
-    function handleSubmit(){
-        localStorage.clear();
-        History.push('/');
+    async function handleSubmit() {
+        if (!data) {
+            console.log("Preencha a descrição antes de enviar!");
+        }
+        else {
+            try {
+                const response = api.post('/register', { description: data });
+                console.log(response);
+                localStorage.clear();
+                History.push('/');
+            }
+            catch (error) {
+                console.log(error);
+            }
+        }
     }
+
     return (
         <>
             <Modal >
@@ -26,7 +42,11 @@ export default function CustomizeRecompense(props) {
                     </Title>
 
                     <CostumizeBox>
-                        <TextArea placeholder="escreva aqui" />
+                        <TextArea
+                            type="text"
+                            value={data}
+                            onChange={(e) => setData(e.target.value)}
+                            placeholder="escreva aqui" />
                         <SubmitButton onClick={handleSubmit}>
                             <p> Salvar</p>
                         </SubmitButton>
