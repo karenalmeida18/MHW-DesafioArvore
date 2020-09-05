@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 
 import { AiOutlineFieldTime, AiOutlineSortAscending } from 'react-icons/ai';
 import { BsBookHalf } from 'react-icons/bs';
@@ -7,14 +7,14 @@ import { MdCake, MdClear, MdKeyboardArrowRight } from "react-icons/md";
 import { RecompensesBox } from '../ListRecompenses/styles';
 import { Modal, Container, Header, Recompense } from './styles/modais';
 import Login from '../ModalLogin';
-import { isLogged } from '../../services/auth'
 
 export default function NewRecompense(props) {
+    const [isLogged, setIsLogged] = useState(false);
     return (
         <>
             <Modal >
                 <Container >
-                    { isLogged() ?
+                    { isLogged ?
                         <>
                             <Header >
                                 <MdCake className='iconHeader' />
@@ -39,7 +39,7 @@ export default function NewRecompense(props) {
                                 </Recompense>
                             </RecompensesBox>
                         </>
-                        : <Login onClose={props.onClose} />
+                        : <Login onClose={props.onClose} redirectUser={(bool) => setIsLogged(bool)}/>
                     }
                 </Container>
 

@@ -22,13 +22,13 @@ export default function Login(props) {
         }
         else {
             setLoading(true);
-            if (isAuthenticated(email, password)) {
-                setIsLogged(true);
-            }
-
+            
             setTimeout(() => {
                 setLoading(false);
-            }, 2000);
+                if (isAuthenticated(email, password)) {
+                    setIsLogged(true);
+                }
+            }, 1000);
         }
     }
 
@@ -44,7 +44,7 @@ export default function Login(props) {
             <Form onSubmit={handleSubmit}>
                 <input type="text" placeholder="Usuário" value={email} onChange={e => setEmail(e.target.value)} />
                 <input type="password" placeholder="Senha" value={password} onChange={e => setPassword(e.target.value)} />
-                <SubmitButton loading={loading}  >
+                <SubmitButton loading={loading} onClick={props.redirectUser(isLogged)} >
                     {loading ? <FaSpinner /> : <p> Autenticar</p>}
                 </SubmitButton>
             </Form>

@@ -1,32 +1,34 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 
 import api from '../../services/api';
 
 import { AiOutlineEdit } from 'react-icons/ai';
 import { MdClear } from "react-icons/md";
+import { FaSpinner } from "react-icons/fa";
 
 import { Modal, Container, Header, TextArea, Title, CostumizeBox } from './styles/modais';
 import { SubmitButton } from '../ModalLogin/styles';
 
 export default function CustomizeRecompense(props) {
+    const [loading, setLoading] = useState(false);
     const [data, setData] = useState("");
-    const History = useHistory();
 
     async function handleSubmit() {
         if (!data) {
             console.log("Preencha a descrição antes de enviar!");
         }
         else {
+            setLoading(true);
             try {
                 const response = api.post('/register', { description: data });
                 console.log(response);
                 localStorage.clear();
-                History.push('/');
+                window.location.reload();
             }
             catch (error) {
                 console.log(error);
             }
+            setLoading(false);
         }
     }
 
@@ -47,8 +49,8 @@ export default function CustomizeRecompense(props) {
                             value={data}
                             onChange={(e) => setData(e.target.value)}
                             placeholder="escreva aqui" />
-                        <SubmitButton onClick={handleSubmit}>
-                            <p> Salvar</p>
+                        <SubmitButton loading={loading}  onClick={handleSubmit}>
+                            {loading ? <FaSpinner /> : <p> Salvar</p>}
                         </SubmitButton>
                     </CostumizeBox>
 
