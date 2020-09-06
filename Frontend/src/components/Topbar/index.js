@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { TopbarContainer, IconsContainer, IconStar, IconCoin } from './styles';
 import { BiArrowBack } from 'react-icons/bi';
@@ -7,7 +8,10 @@ import { HiStar } from 'react-icons/hi';
 export default function Navbar() {
     return (
         <TopbarContainer>
-            <BiArrowBack />
+            <Link to='/'>
+                <BiArrowBack />
+            </Link>
+            
             <IconsContainer>
                 <IconStar>
                     <div>
