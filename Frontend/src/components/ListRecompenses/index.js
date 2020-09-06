@@ -3,10 +3,13 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 
 import { MdCake, MdAddCircle } from "react-icons/md";
-import { RecompensesContainer, NewRecompensa, Recompense, RecompensesBox } from './styles';
+import { RecompensesContainer, NewRecompensa, Recompense, RecompensesBox, Avatar, BordaGrama, FundoMacaco } from './styles';
 
 import Navbar from '../../components/Navbar';
 import Topbar from '../../components/Topbar';
+
+import Macaco from '../../assets/macacoTela.png';
+import Grama from '../../assets/grass_desktop.svg';
 
 export default function ListRecompenses(props) {
     const [recompensesData, setRecompensesData] = useState([]);
@@ -28,32 +31,36 @@ export default function ListRecompenses(props) {
         <>
             <Topbar />
             <RecompensesContainer>
-
+                
                 <h3>Recompensas</h3>
 
                 <NewRecompensa onClick={props.openNewRecompense}>
                     <MdAddCircle />
-                 Nova recompensa
-            </NewRecompensa>
+                    Nova recompensa
+                </NewRecompensa>
 
                 <RecompensesBox>
-                    <Recompense>
                         {recompensesData.length > 0 ? (
                             <>
                               {recompensesData.map((recompense) => (
-                                  <>
-                                <MdCake />
-                                <span>{recompense.description}</span>
+                                <>
+                                <Recompense>
+                                    <MdCake />
+                                    <span>{recompense.description}</span>
+                                </Recompense>
                                 </>
                             ))}
                             </>
                         ) : <span> Nenhuma recompensa disponivel </span> }
-                      
-                    </Recompense>
-
                 </RecompensesBox>
 
             </RecompensesContainer>
+
+            <FundoMacaco>
+                <BordaGrama src={Grama}/>
+                <Avatar src={Macaco}/>
+            </FundoMacaco>
+
             <Navbar />
         </>
     );

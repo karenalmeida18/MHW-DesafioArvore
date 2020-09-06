@@ -18,6 +18,10 @@ export const TopbarContainer = styled.div`
   
      svg { 
          font-size: 20pt;
+         
+         :active {
+            color: #00BFA6;
+        }
      }
     }
 
