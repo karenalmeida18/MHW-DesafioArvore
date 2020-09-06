@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import api from '../../services/api';
 
 import { MdCake, MdAddCircle } from "react-icons/md";
+import { CgSmileSad } from "react-icons/cg";
 import { RecompensesContainer, NewRecompensa, Recompense, RecompensesBox, Avatar, BordaGrama, FundoMacaco } from './styles';
 
 import Navbar from '../../components/Navbar';
@@ -51,7 +52,12 @@ export default function ListRecompenses(props) {
                                 </>
                             ))}
                             </>
-                        ) : <span> Nenhuma recompensa disponivel </span> }
+                        ) :  (
+                            <Recompense>
+                                 <CgSmileSad/>
+                                <span > Você ainda não tem recompensas! </span> 
+                            </Recompense>
+                        )}
                 </RecompensesBox>
 
             </RecompensesContainer>

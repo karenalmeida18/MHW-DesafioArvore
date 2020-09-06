@@ -13,35 +13,35 @@ export default function NewRecompense(props) {
     return (
         <>
             <Modal >
-                <Container >
-                    { isLogged ?
-                        <>
-                            <Header >
-                                <MdCake className='iconHeader' />
-                                <MdClear onClick={props.onClose} />
-                            </Header>
-                            <h3>Nova Recompensa</h3>
+                {isLogged ?
+                    <Container >
 
-                            <RecompensesBox>
-                                <Recompense onClick={props.openTime}>
-                                    <p><AiOutlineFieldTime color='#45D0C1' />
+                        <Header >
+                            <MdCake className='iconHeader' />
+                            <MdClear onClick={props.onClose} />
+                        </Header>
+                        <h3>Nova Recompensa</h3>
+
+                        <RecompensesBox>
+                            <Recompense onClick={props.openTime}>
+                                <p><AiOutlineFieldTime color='#45D0C1' />
                                      Por tempo</p> <MdKeyboardArrowRight />
-                                </Recompense>
+                            </Recompense>
 
-                                <Recompense onClick={props.openCategory}>
-                                    <p> <AiOutlineSortAscending color='#45D0C1' />
+                            <Recompense onClick={props.openCategory}>
+                                <p> <AiOutlineSortAscending color='#45D0C1' />
                                     Por categoria </p> <MdKeyboardArrowRight />
-                                </Recompense>
+                            </Recompense>
 
-                                <Recompense onClick={props.openBook}>
-                                    <p> <BsBookHalf color='#45D0C1' />
+                            <Recompense onClick={props.openBook}>
+                                <p> <BsBookHalf color='#45D0C1' />
                                     Por livro </p><MdKeyboardArrowRight />
-                                </Recompense>
-                            </RecompensesBox>
-                        </>
-                        : <Login onClose={props.onClose} redirectUser={(bool) => setIsLogged(bool)}/>
-                    }
-                </Container>
+                            </Recompense>
+                        </RecompensesBox>
+                    </Container>
+
+                    : <Login onClose={props.onClose} redirectUser={(bool) => setIsLogged(bool)} />
+                }
 
             </Modal>
         </>

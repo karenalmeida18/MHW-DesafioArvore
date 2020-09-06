@@ -26,11 +26,11 @@ export default function CategoryRecompenses(props) {
                             <p style={{ marginLeft: '20px' }}> Artes </p> <MdKeyboardArrowRight />
                         </Recompense>
 
-                        <Recompense>
+                        <Recompense onClick={() => setVisible(true)}>
                             <p style={{ marginLeft: '20px' }}> Ciencias Humanas e Sociais </p> <MdKeyboardArrowRight />
                         </Recompense>
 
-                        <Recompense>
+                        <Recompense onClick={() => setVisible(true)}>
                             <p style={{ marginLeft: '20px' }}> Fantasia </p><MdKeyboardArrowRight />
                         </Recompense>
                     </RecompensesBox>
