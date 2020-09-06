@@ -7,21 +7,26 @@ import { MdClear } from "react-icons/md";
 import { FaSpinner } from "react-icons/fa";
 
 import { Modal, Container, Header, TextArea, Title, CostumizeBox } from './styles/modais';
-import { SubmitButton } from '../ModalLogin/styles';
+import { SubmitButton, MsgBox } from '../ModalLogin/styles';
 
 export default function CustomizeRecompense(props) {
     const [loading, setLoading] = useState(false);
     const [data, setData] = useState("");
+    const [error, setError] = useState(false);
+    const [alert, setAlert] = useState("");
 
     async function handleSubmit() {
         if (!data) {
-            console.log("Preencha a descrição antes de enviar!");
+            setError(true);
+            setAlert("Preencha todos os campos para continuar.");
         }
         else {
             setLoading(true);
             try {
-                const response = api.post('/register', { description: data });
-                console.log(response);
+                api.post('/register', { description: data });
+                setError(false);
+                setAlert("Recompensa cadastrada!");
+
                 localStorage.clear();
                 window.location.reload();
             }
@@ -45,11 +50,15 @@ export default function CustomizeRecompense(props) {
 
                     <CostumizeBox>
                         <TextArea
+                            error={error}
                             type="text"
                             value={data}
                             onChange={(e) => setData(e.target.value)}
-                            placeholder="escreva aqui" />
-                        <SubmitButton loading={loading}  onClick={handleSubmit}>
+                            placeholder="Escreva aqui a recompensa para seu filho." />
+                        <MsgBox alert={alert}>
+                            {alert}
+                        </MsgBox>
+                        <SubmitButton loading={loading} onClick={handleSubmit}>
                             {loading ? <FaSpinner /> : <p> Salvar</p>}
                         </SubmitButton>
                     </CostumizeBox>
