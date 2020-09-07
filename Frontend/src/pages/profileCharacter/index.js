@@ -41,7 +41,8 @@ export default function ProfileCharacter() {
                         {readingDone ?
                             <ContentModal sleep={sleep} />
                             :
-                            <BoxMessage />
+                            <BoxMessage content="Otto está com sono. Mas para fazer-lo dormir,
+                            precisamos ler 10 páginas para ele. Vamos lá? " />
                         }
                     </>
                 )}

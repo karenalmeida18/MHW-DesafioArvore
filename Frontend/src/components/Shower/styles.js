@@ -6,7 +6,6 @@ const shower = keyframes `
         opacity: 0;
 }
  `
-
 export const Gota = styled.div `    
          background: #f0f1f1;
          width: 16px;
