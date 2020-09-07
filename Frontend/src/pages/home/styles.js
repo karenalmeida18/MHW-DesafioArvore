@@ -124,7 +124,7 @@ export const Recompensas = styled.button`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 94%;
+        width: 100%;
     }
 
     :hover{
@@ -134,7 +134,6 @@ export const Recompensas = styled.button`
     svg{
         font-size: 30px;
         margin: 0;
-        margin-left: 10px;
     }
 
     @media (min-width: 700px){
@@ -154,7 +153,7 @@ export const Bookcase = styled.button`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 92%;
+        width: 100%;
     }
 
     :hover{
@@ -164,7 +163,6 @@ export const Bookcase = styled.button`
     svg{
         font-size: 30px;
         margin: 0;
-        margin-left: 20px;
     }
 
     @media (min-width: 700px){

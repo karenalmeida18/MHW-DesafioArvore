@@ -25,18 +25,35 @@ export const Avatar = styled.img`
 `;
 export const AvatarAnimate = styled.img`
     width: auto;
-    height: 400px;
+    height: 500px;
+    margin: 23px 0 0 40px;
     display: ${props => props.isEating ? "block" :  "none"};    
 `;
 
 export const Footer = styled.footer`
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
+    align-content: center;
     position: fixed;
     z-index: 2;
     bottom : 0;
-    width: 100%;
+    width: 95%;
+    border-radius: 25px;
+    margin-bottom: 10px;
+    background-color: #AB6A4F;
+    padding: 15px 0;
+    -webkit-box-shadow: 9px 2px 5px 5px rgba(50, 50, 50, 0.77);
+    -moz-box-shadow:  9px 7px 5px 7px rgba(50, 50, 50, 0.77);
+    box-shadow:  10px 10px 10px 4px rgba(50, 50, 50, 0.77);
+
+    img{
+        height: 70px;
+        width: auto;
+        :hover{
+            transform: scale(1.2);
+        }
+    }
 `;
 
 export const ShowerButton = styled.button.attrs(props => ({
@@ -45,8 +62,6 @@ export const ShowerButton = styled.button.attrs(props => ({
     &[disabled]{
         opacity: 0.6;
     }
-    color: ${props => props.inShower ? "#ffff" :"black "};
-    font-size: 40pt;
     border: 0;
     background-color: inherit;
 `;
@@ -57,8 +72,6 @@ export const EatButton = styled.button.attrs(props => ({
     &[disabled]{
         opacity: 0.6;
     }
-    color: ${props => props.isEating ? "#b3b3b3" :"black "};
-    font-size: 40pt;
     border: 0;
     background-color: inherit;
 `;
@@ -69,8 +82,6 @@ export const SleepButton = styled.button.attrs(props => ({
     &[disabled]{
         opacity: 0.6;
     }
-    color: ${props => props.sleep ? "yellow" :"black "};
-    font-size: 40pt;
     border: 0;
     background-color: inherit;
 `;
@@ -78,7 +89,7 @@ export const SleepButton = styled.button.attrs(props => ({
 
 export const Food = styled.div`
     color : rgba(186, 33,33,100);
-    font-size: 20pt;
+    font-size: 30pt;
     position: relative;
     transform: rotate(15deg);
     animation: fadeBottom .2s;

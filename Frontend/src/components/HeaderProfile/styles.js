@@ -2,27 +2,30 @@ import styled from 'styled-components';
 
 export const Header = styled.header`
     display: flex;
-    padding: 5px 10px;
+    padding: 10px 10px;
     margin-bottom: 30%;
-    border-radius: 0px 0px 10px 10px ;
+    margin-top: 8px;
+    width: 95%;
+    /* border-radius: 0px 0px 10px 10px ; */
+    border-radius: 15px;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     z-index: 2;
     cursor: pointer;
     top: 0;
-    width: 100%;
-    background: rgba(69,208,193, 24);
+    /* width: 100%; */
+    background: #AB6A4F;
+
     svg{
         font-size: 30pt;
-        color: #45D0C1;
         :hover{
-        transform:scale(1.5);
+            transform: scale(1.2);
         }
     }
     -webkit-box-shadow: 9px 2px 5px rgba(50, 50, 50, 0.77);
     -moz-box-shadow:  9px 7px 5px rgba(50, 50, 50, 0.77);
-    box-shadow:  px 7px 5px rgba(50, 50, 50, 0.77);
+    box-shadow:  9px 7px 5px rgba(50, 50, 50, 0.77);
 `;
 
 export const Nivel = styled.button`
@@ -45,11 +48,11 @@ export const InfoNivel = styled.div`
     position: absolute;
     flex-direction: column;
     padding: 15px;
-    background-color: #fff;
+    background-color: #FFFFFF;
     margin-top: 20%;
     color: grey;
     width: auto;
-    height: 50%;
+    height: 60%;
     z-index: 5;
     border-radius: 15px;
     .close{
@@ -86,18 +89,19 @@ export const MissionBox = styled.div`
         margin-top: 10px;
         display: flex;
         justify-content: space-between;
-        
+        align-items: center;
     }
+    
     .container-books > div{
-       display: flex;
-       padding: 5px;
-       flex-direction: column;
-       border-radius: 10px;
-       margin-left: 6px;
-       font-size: 10pt;
-       -webkit-box-shadow: 9px 5px 5px rgba(50, 50, 50, 0.77);
-       -moz-box-shadow:  9px 5px 5px rgba(50, 50, 50, 0.77);
-       box-shadow:  9px 5px 5px rgba(50, 50, 50, 0.77);
+        width: 32%;
+        display: flex;
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        -webkit-box-shadow: 5px 5px 5px rgba(50, 50, 50, 0.77);
+        -moz-box-shadow:  5px 5px 5px rgba(50, 50, 50, 0.77);
+        box-shadow:  5px 5px 5px rgba(50, 50, 50, 0.77);
        
        :nth-child(1) {
         background-color: #FFA17C;
@@ -110,15 +114,29 @@ export const MissionBox = styled.div`
        :nth-child(3) {
         background-color: #96DD48;
        }
+
+       p{
+        font-size: 12pt;
+        color: #222222;
+        font-weight: 300;
+       }
+       :hover{
+            transform: scale(1.1);
+        }
     }    
     svg{
-       color: black;
+        color: #222222;
     }
     
+    p{
+        padding: 0;
+        margin: 8px 0;
+        font-weight: 600;
+        font-size: 20px;
+    }
     
 `;
 export const Livro = styled.img`
-    width: auto;
-    height: 55px;
-    padding: 5px ;
+    height: auto;
+    width: 70%;
 `;

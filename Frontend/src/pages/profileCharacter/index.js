@@ -6,15 +6,17 @@ import {
 
 import monkey from '../../assets/macaco-corpo-feliz.png';
 import monkeySleep from '../../assets/macaco-dormindo.png';
-import monkeyEating from '../../assets/macaco-corpo-falando.gif';
+import monkeyEating from '../../assets/macaco-comendo.gif';
 
-import { GiBedLamp } from 'react-icons/gi';
-import { FaShower, FaAppleAlt } from 'react-icons/fa'
-import { RiFridgeFill } from 'react-icons/ri';
+import { FaAppleAlt } from 'react-icons/fa';
 
 import BoxMessage from '../../components/BoxMessages';
 import Shower from '../../components/Shower';
 import HeaderProfile from '../../components/HeaderProfile';
+
+import ShowerIcon from '../../assets/water.png';
+import LampIcon from '../../assets/lamp.png';
+import FridgeIcon from '../../assets/kitchen.png';
 
 export default function ProfileCharacter() {
     const [sleep, setSleep] = useState(false);
@@ -68,20 +70,20 @@ export default function ProfileCharacter() {
                         sleep={readingDone && sleep} inShower={inShower} isEating={isEating}
                         onClick={() => setSleep(!sleep)}
                     >
-                        <GiBedLamp />
+                        <img src={LampIcon} />
                     </SleepButton>
 
                     <ShowerButton
                         sleep={readingDone && sleep} inShower={inShower} isEating={isEating}
                         onClick={() => setInShower(!inShower)}
                     >
-                        <FaShower />
+                        <img src={ShowerIcon} />
                     </ShowerButton>
 
                     <EatButton
                         sleep={readingDone && sleep} inShower={inShower} isEating={isEating}
                         onClick={() => setIsEating(!isEating)} >
-                        <RiFridgeFill />
+                        <img src={FridgeIcon} />
                     </EatButton>
                 </Footer>
             </Container>

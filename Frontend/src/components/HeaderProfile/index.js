@@ -22,7 +22,7 @@ export default function HeaderProfile() {
                 
                 <Nivel onClick={() => setVisible(true)}>  <h4> 1 </h4></Nivel>
                 <FcReading />
-                <FcLikePlaceholder />
+                <FcLikePlaceholder/>
                 <FcSalesPerformance />
 
                 {visible && 
