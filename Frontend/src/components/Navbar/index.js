@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { FiHome, FiMenu } from 'react-icons/fi';
 import { RiStackFill } from 'react-icons/ri';
 import { FaMedal } from 'react-icons/fa';
-import { HiDownload } from 'react-icons/hi'
+import { HiDownload } from 'react-icons/hi';
+import { CgProfile } from 'react-icons/cg';
 
 import { NavbarContainer } from './styles';
 
@@ -17,6 +18,12 @@ export default function Navbar() {
                         <FiHome />
                          Inicio
                     </Link>
+                </li>
+                <li>
+                    <Link to='/character'>
+                        <CgProfile />
+                        Otto
+                     </Link>
                 </li>
                 <li>
                     <RiStackFill />
