@@ -88,15 +88,12 @@ export const SleepButton = styled.button.attrs(props => ({
 
 
 export const Food = styled.div`
-    color : rgba(186, 33,33,100);
-    font-size: 30pt;
+    svg {
+        color : rgba(186, 33,33,100);
+        font-size: 30pt;
+    }
     position: relative;
-    transform: rotate(15deg);
-    animation: fadeBottom .2s;
-    left:-180px; top:-66px;
-    @keyframes fadeBottom {
-    50%   { left:0px; bottom: -400px;}
-    100% { left:-150px; top:-60px;}
-}    
-
+    left: -100px;
+    color: gray;
 `;
+

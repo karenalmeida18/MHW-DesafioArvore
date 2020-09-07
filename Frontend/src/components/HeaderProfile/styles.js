@@ -43,7 +43,7 @@ export const Nivel = styled.button`
 	
 `;
 
-export const InfoNivel = styled.div`
+export const InfoModal= styled.div`
     display: flex;
     position: absolute;
     flex-direction: column;
@@ -55,12 +55,6 @@ export const InfoNivel = styled.div`
     height: 60%;
     z-index: 5;
     border-radius: 15px;
-    .close{
-        color: black;
-        text-align: end;
-        margin: 0;
-        margin-left: 90%;
-    }
     p{
         display: flex;
         align-items: center;
@@ -140,3 +134,47 @@ export const Livro = styled.img`
     height: auto;
     width: 70%;
 `;
+export const Title = styled.title`
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 15pt;
+    svg{
+        color: gray;
+    }
+`;
+
+export const ProgressBarBox = styled.div`
+    height: 20px;
+    border-radius: 25px;
+    background-color: #CCC;
+    position: relative;
+` 
+  
+export const ProgressBar = styled.div`
+   position: absolute;
+   border-radius: 25px;
+   height: 100%;
+   background-color: #0fd439;
+   animation: progress-animation 5s infinite;
+   @keyframes progress-animation{
+    0% { width: 0%; } 
+   100% { width: 100%}
+}
+`
+  
+export const Conquista = styled.div`
+    display: flex;
+    flex-direction: row;
+    font-size: 10pt;
+    margin-top: 5px;
+    svg{
+        font-size: 45pt;
+        border: 1px solid #eeee;
+    }
+    div{
+        margin-left: 20px;
+        border: 1px solid #eeee;
+        flex: 1;;
+    }
+`

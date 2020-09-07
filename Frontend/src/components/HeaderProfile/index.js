@@ -1,61 +1,36 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
-import { Header, Nivel, InfoNivel, MissionBox, Livro } from './styles';
-import { Container } from '../BoxMessages/styles';
+import { Header, Nivel, } from './styles';
 
-import { BiArrowBack, BiArrowToRight } from 'react-icons/bi';
+import { BiArrowBack } from 'react-icons/bi';
 import { FcReading, FcSalesPerformance, FcLikePlaceholder } from 'react-icons/fc';
-import { GiLaurelsTrophy } from 'react-icons/gi';
-import { AiOutlinePercentage } from 'react-icons/ai';
-import { MdClear } from 'react-icons/md';
 
-import Livro1 from '../../assets/livro8.png';
-import Livro2 from '../../assets/livro10.png';
-import Livro3 from '../../assets/livro11.png';
+import ModalNivel from './modalNivel';
+import ModalMood from './modalMood';
+import ModalBooks from './modalBooks';
 
 export default function HeaderProfile() {
-    const [ visible, setVisible ] = useState(false);
+    const [visibleNivel, setVisibleNivel] = useState(false);
+    const [visibleMood, setVisibleMood] = useState(false);
+    const [visibleBooks, setVisibleBooks] = useState(false);
+
     return (
         <>
             <Header>
+
                 <BiArrowBack style={{ color: "black", fontSize: "30px" }} />
-                
-                <Nivel onClick={() => setVisible(true)}>  <h4> 1 </h4></Nivel>
-                <FcReading />
-                <FcLikePlaceholder/>
+
+                <Nivel onClick={() => setVisibleNivel(true)}>  <h4> 1 </h4></Nivel>
+                <FcReading onClick={() => setVisibleBooks(true)} />
+                <FcLikePlaceholder onClick={() => setVisibleMood(true)}/>
                 <FcSalesPerformance />
 
-                {visible && 
-                <Container>
-                    <InfoNivel>
-                        <MdClear className="close" onClick={() => setVisible(false)}/>
-                        <p><GiLaurelsTrophy /> <strong> Level : </strong>  1 </p>
-                        <p><AiOutlinePercentage /> <strong> Resta para o próximo level :</strong>  20%</p>
-
-                        <MissionBox>
-                            <p> Missões para passar de level! </p>
-                            <div className="container-books">
-                                <div>
-                                    <p>+10 pontos</p>
-                                    <Livro src={Livro1}></Livro>
-                                    <p>Leia agora <BiArrowToRight /></p>
-                                </div>
-                                <div>
-                                    <p>+10 pontos</p>
-                                    <Livro src={Livro2}></Livro>
-                                    <p>Leia agora <BiArrowToRight /></p>
-                                </div>
-                                <div>
-                                    <p>+10 pontos</p>
-                                    <Livro src={Livro3}></Livro>
-                                    <p>Leia agora <BiArrowToRight /></p>
-                                </div>                            </div>
-
-                        </MissionBox>
-                    </InfoNivel>
-                </Container>
-                }
             </Header>
+
+            {visibleNivel && <ModalNivel onClose={() => setVisibleNivel(false)} />}
+            {visibleMood && <ModalMood onClose={() => setVisibleMood(false)} />}
+            {visibleBooks && <ModalBooks onClose={() => setVisibleBooks(false)} />}
+
         </>
     );
 }

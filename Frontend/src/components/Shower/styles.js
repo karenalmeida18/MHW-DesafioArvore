@@ -17,7 +17,7 @@ export const Gota = styled.div `
          border: 0px solid #000000;
          box-shadow: 2px 1px 2px 0 #666666;
          position: absolute;
-         animation: ${shower} 3s ease-in-out infinite;
+         animation: ${shower} 1s ease-in-out infinite;
          top: -30px;
          display: ${props => props.inShower ? "block" : "none"};
 
