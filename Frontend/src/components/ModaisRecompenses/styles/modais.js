@@ -84,7 +84,7 @@ export const Recompense = styled.button`
       }
   
   @media(min-width: 700px){
-    height: 80px;
+      height: 80px;
   }
 `;
 
