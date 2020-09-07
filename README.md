@@ -5,7 +5,7 @@ Projeto desenvolvido para o desafio do hackathon Mega Hack Woman
 
 <h2> Descrição e tecnologias </h2>
 
-Projeto desenvolvido para o desafio Árvore do hackathon Mega Hack Woman. O projeto aprimora a plataforma Árvore com o objetivo de cativar as crianças para a leitura com gameficações e recompensas personalizadas pelos pais, fornecendo interatividade e maior atração desse público. 
+Projeto desenvolvido de forma responsiva focado para versão mobile, para o desafio Árvore do hackathon Mega Hack Woman. O projeto aprimora a plataforma Árvore com o objetivo de cativar as crianças para a leitura com gameficações e recompensas personalizadas pelos pais, fornecendo interatividade e maior atração desse público. 
 
 <h2> Backend </h2>
 <h3> Principais Tecnologias </h3> 
