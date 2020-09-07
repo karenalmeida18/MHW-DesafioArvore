@@ -27,20 +27,19 @@ export const Container = styled.div`
 
     p{
         margin-left: 10px;
-        font: 700 20px Roboto;
+        font: 600 18px Roboto;
         color: #FFFFFF;
     }
 `;
 
 export const Ambients = styled.div`
     width: 85%;
-    height: 400px;
-    margin: 10px 0;
+    height: 320px;
+    margin: 80px 0 10px 0;
     display: grid; /* divide a minha tela em um grid */
     grid-template-columns: 1fr 1fr; /* fracionando em 5 e pegando 3 colunas*/
-    grid-template-rows: 1fr 2fr 2fr; /* pegando 2 linhas */
+    grid-template-rows: 1fr 1fr; /* pegando 2 linhas */
     grid-template-areas: 
-        "titulo titulo"
         "floresta jardim" 
         "pomar terrario";
 
@@ -52,11 +51,14 @@ export const Ambients = styled.div`
 `;
 
 export const Titulo = styled.div`
-    grid-area: titulo;
+    position: fixed;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: initial;
+    background-color: #FFFFFF;
+    width: 100%;
+    padding: 20px;
     
     svg{
         color: black;
@@ -121,6 +123,8 @@ export const Recompensas = styled.button`
     p{
         display: flex;
         align-items: center;
+        justify-content: space-between;
+        width: 94%;
     }
 
     :hover{
@@ -139,4 +143,33 @@ export const Recompensas = styled.button`
     }
 `;
 
+export const Bookcase = styled.button`
+    width: 85%;
+    height: 60px;
+    background-color: #BB7A4B;
+    border-radius: 5px;
+    margin-top: 15px;
+
+    p{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 92%;
+    }
+
+    :hover{
+        background-color: #AB6A4F;   
+    }
+
+    svg{
+        font-size: 30px;
+        margin: 0;
+        margin-left: 20px;
+    }
+
+    @media (min-width: 700px){
+        width: 65%;
+        height: 75px;
+    }
+`;
 

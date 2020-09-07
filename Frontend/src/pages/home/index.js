@@ -6,7 +6,7 @@ import { FaTree, FaMountain } from 'react-icons/fa';
 import { GiFruitTree } from 'react-icons/gi';
 import { RiPlantFill } from 'react-icons/ri';
 
-import { Container, Ambients, Titulo, Floresta, Jardim, Pomar, Terrario, Recompensas } from './styles';
+import { Container, Ambients, Titulo, Floresta, Jardim, Pomar, Terrario, Recompensas, Bookcase} from './styles';
 import Navbar from '../../components/Navbar';
 import Topbar from '../../components/Topbar';
 
@@ -17,13 +17,11 @@ export default function Home() {
         <>
             <Topbar />
             <Container>
+                <Titulo>
+                    <RiPlantFill />
+                    <h1>Minhas Plantas</h1>
+                </Titulo>
                 <Ambients>
-
-                    <Titulo>
-                        <RiPlantFill />
-                        <h1>Minhas Plantas</h1>
-                    </Titulo>
-
                     <Floresta>
                         <FaTree />
                         <p>Floresta</p>
@@ -45,9 +43,16 @@ export default function Home() {
                 <Recompensas onClick={() => History.push('/recompenses')} >
                     <p>
                         Recompensas personalizadas
-                    <IoIosArrowForward />
+                        <IoIosArrowForward />
                     </p>
                 </Recompensas>
+
+                <Bookcase onClick={() => History.push('/bookcase')} >
+                    <p>
+                        Minha estante
+                        <IoIosArrowForward />
+                    </p>
+                </Bookcase>
 
             </Container>
             <Navbar />
