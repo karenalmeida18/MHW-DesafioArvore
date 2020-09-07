@@ -23,7 +23,7 @@ export default function ProfileCharacter() {
     const [sleep, setSleep] = useState(false);
     const [inShower, setInShower] = useState(false);
     const [isEating, setIsEating] = useState(false);
-    const [readingDone, setReadingDone] = useState(true);
+    const [readingDone] = useState(true);
 
     /*alterna entre leitura feita e não feita (simulação)
     useEffect(() => {

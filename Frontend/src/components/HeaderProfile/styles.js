@@ -67,6 +67,9 @@ export const InfoModal= styled.div`
         color: #fcd406;
         font-size: 17pt;
     }
+    @media(min-width: 700px){
+        margin-top: 0;  
+    }
 `
 export const MissionBox = styled.div`
     margin-top: 20px;
@@ -82,6 +85,7 @@ export const MissionBox = styled.div`
         display: flex;
         justify-content: space-between;
         align-items: center;
+        cursor: pointer;
     }
     
     .container-books > div{
@@ -131,6 +135,10 @@ export const MissionBox = styled.div`
 export const Livro = styled.img`
     height: auto;
     width: 70%;
+    @media(min-width: 700px){
+        height: 50px;
+        width: auto; 
+    }
 `;
 export const Title = styled.title`
     display: flex;
@@ -140,6 +148,7 @@ export const Title = styled.title`
     font-weight: 600;
     svg{
         color: gray;
+        cursor: pointer;
     }
 `;
 
