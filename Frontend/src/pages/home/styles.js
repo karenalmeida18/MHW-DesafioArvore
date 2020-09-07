@@ -48,9 +48,12 @@ export const Ambients = styled.div`
         width: 65%;
         height: 450px;
     }
+    @media (min-width: 700px){
+       margin: auto;
+    }
 `;
 
-export const Titulo = styled.div`
+export const Titulo = styled.title`
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -59,7 +62,6 @@ export const Titulo = styled.div`
     background-color: #FFFFFF;
     width: 100%;
     padding: 20px;
-    
     svg{
         color: black;
         font-size: 40px;
@@ -70,6 +72,12 @@ export const Titulo = styled.div`
         margin-left: 10px;
         font: 700 25px Roboto;
         color: black;
+    }
+    @media (min-width: 700px){
+       padding: 10px 30px;
+       svg{
+           margin-left: 65px;
+       }
     }
 `;
 
@@ -124,7 +132,7 @@ export const Recompensas = styled.button`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 94%;
+        width: 100%;
     }
 
     :hover{
@@ -134,7 +142,6 @@ export const Recompensas = styled.button`
     svg{
         font-size: 30px;
         margin: 0;
-        margin-left: 10px;
     }
 
     @media (min-width: 700px){
@@ -154,7 +161,7 @@ export const Bookcase = styled.button`
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 92%;
+        width: 100%;
     }
 
     :hover{
@@ -164,7 +171,6 @@ export const Bookcase = styled.button`
     svg{
         font-size: 30px;
         margin: 0;
-        margin-left: 20px;
     }
 
     @media (min-width: 700px){
