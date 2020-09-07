@@ -6,7 +6,6 @@ export const Header = styled.header`
     margin-bottom: 30%;
     margin-top: 8px;
     width: 95%;
-    /* border-radius: 0px 0px 10px 10px ; */
     border-radius: 15px;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +13,6 @@ export const Header = styled.header`
     z-index: 2;
     cursor: pointer;
     top: 0;
-    /* width: 100%; */
     background: #AB6A4F;
 
     svg{
@@ -58,7 +56,7 @@ export const InfoModal= styled.div`
     p{
         display: flex;
         align-items: center;
-        margin-top: 10px;
+        margin-top: 15px;
     }
     strong {
         color: #45D0C1;
@@ -138,7 +136,8 @@ export const Title = styled.title`
     display: flex;
     width: 100%;
     justify-content: space-between;
-    font-size: 15pt;
+    font-size: 18pt;
+    font-weight: 600;
     svg{
         color: gray;
     }
@@ -149,6 +148,7 @@ export const ProgressBarBox = styled.div`
     border-radius: 25px;
     background-color: #CCC;
     position: relative;
+    margin: 10px 0;
 ` 
   
 export const ProgressBar = styled.div`
@@ -167,7 +167,7 @@ export const Conquista = styled.div`
     display: flex;
     flex-direction: row;
     font-size: 10pt;
-    margin-top: 5px;
+    margin: 6px;
     svg{
         font-size: 45pt;
         border: 1px solid #eeee;
@@ -175,6 +175,6 @@ export const Conquista = styled.div`
     div{
         margin-left: 20px;
         border: 1px solid #eeee;
-        flex: 1;;
+        flex: 1;
     }
 `

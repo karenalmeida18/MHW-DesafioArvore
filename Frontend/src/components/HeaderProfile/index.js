@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 import { Header, Nivel, } from './styles';
 
@@ -17,8 +18,9 @@ export default function HeaderProfile() {
     return (
         <>
             <Header>
-
-                <BiArrowBack style={{ color: "black", fontSize: "30px" }} />
+                <Link to='/'>
+                    <BiArrowBack style={{ color: "black", fontSize: "30px" }} />
+                </Link>
 
                 <Nivel onClick={() => setVisibleNivel(true)}>  <h4> 1 </h4></Nivel>
                 <FcReading onClick={() => setVisibleBooks(true)} />

@@ -26,7 +26,7 @@ export const Avatar = styled.img`
 export const AvatarAnimate = styled.img`
     width: auto;
     height: 500px;
-    margin: 23px 0 0 40px;
+    margin: 23px 0 0 0;
     display: ${props => props.isEating ? "block" :  "none"};    
 `;
 
@@ -88,12 +88,22 @@ export const SleepButton = styled.button.attrs(props => ({
 
 
 export const Food = styled.div`
+    h6{
+        width: 70px;
+        height: 100;
+        margin-bottom: 10px;
+        color: #AB6A4F;
+        font-size: 15px;
+    }
     svg {
         color : rgba(186, 33,33,100);
-        font-size: 30pt;
+        font-size: 40pt;
     }
-    position: relative;
-    left: -100px;
-    color: gray;
+    right: 0;
+    width: 90px;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `;
 

@@ -26,12 +26,12 @@ export default function ModalMood(props) {
                         <p><GiSoapExperiment color="blue"/> <strong> Higiene  :</strong>  20%</p>
 
                         <p><BiHappyHeartEyes color="#FFA17C"/><strong>Felicidade</strong> : 100% </p>
-                       <ProgressBarBox>
+                        <ProgressBarBox>
                            <ProgressBar/>
-                       </ProgressBarBox>
+                        </ProgressBarBox>
 
-                       <p style={{color: "#FFA17C",fontSize: "10pt"}}> 
-                       Continue lendo para manter a felicidade 100%! </p>
+                        <p style={{color: "#FFA17C",fontSize: "10pt"}}> 
+                        Continue lendo para manter a felicidade 100%! </p>
 
                     </InfoModal>
                 </Container>
